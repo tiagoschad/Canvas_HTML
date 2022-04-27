@@ -113,21 +113,28 @@ ctx.beginPath();
     ctx.fill();
     */
 
+    
+    //Estrela Brilhante//
+ctx.fillStyle = gerar_cor_hexadecimal();
+ctx.beginPath();
+ctx.moveTo(108, 0.0);
+ctx.lineTo(141, 70);
+ctx.lineTo(218, 78.3);
+ctx.lineTo(162, 131);
+ctx.lineTo(175, 205);
+ctx.lineTo(108, 170);
+ctx.lineTo(41.2, 205);
+ctx.lineTo(55, 131);
+ctx.lineTo(1, 78);
+ctx.lineTo(75, 68);
+ctx.lineTo(108, 0);
+ctx.closePath();
+ctx.fill();
+
+
     //Símbolo do Morcegão
     ctx.transform( 1 , 0 , 0 , -1 , canvas.width * 0.5 , canvas.height * 0.5 ); 
 ctx.save( ); 
-
-ctx.fillStyle = 'red';
-ctx.fillRect( -2 , -2 , 4 , 4 );
-
-
-ctx.beginPath( );
-ctx.moveTo( canvas.width * -0.5, 0 );
-ctx.lineTo( canvas.width * 0.5, 0 );
-ctx.moveTo( 0, canvas.width * -0.5 );
-ctx.lineTo( 0, canvas.width * 0.5 );
-ctx.strokeStyle = '#F5F5F5';
-ctx.stroke( );
 
 ctx.scale( 1, -1 );
 ctx.font = '15px Arial';
