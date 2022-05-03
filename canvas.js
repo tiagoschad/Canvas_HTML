@@ -2,16 +2,50 @@ var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
-var x = 50;
-var y = 100;
-var auxX = 0;
-var auxY = 0;
+var x = 200;
+var y = 200;
+var auxX = 15;
+var auxY = 5;
 
 function gerar_cor_hexadecimal() {
     return '#' + parseInt((Math.random() * 0xFFF))
         .toString(16)
         .padStart(3, '0');
 }
+/*
+function animateY(){
+  requestAnimationFrame(animateY)
+
+  ctx.clearRect(0, 0, innerWidth, innerHeight)
+
+   ctx.fillStyle = "grey"
+   ctx.fillRect(200, y, 200, 200);
+
+   if ((y + 200) > innerHeight) {
+    auxY = -auxY
+  }
+  else if (y<0) auxY = -auxY
+y = y + auxY
+}
+
+animateY() */
+/*
+function animateX(){
+ requestAnimationFrame(animateX)
+
+ctx.clearRect(0, 0, innerWidth, innerHeight)
+
+   ctx.fillStyle = "purple"
+   ctx.fillRect(x, 200, 200, 200);
+
+   if ((x + 200) > innerWidth) {
+     auxX = -auxX
+   }
+   else if (x<0) auxX = -auxX
+x = x + auxX
+}
+
+animateX() */
 
 /*
 //Desafio 1 
@@ -113,7 +147,7 @@ ctx.beginPath();
     ctx.fill();
     */
 
-    
+    /*
     //Estrela Brilhante//
 ctx.fillStyle = gerar_cor_hexadecimal();
 ctx.beginPath();
@@ -317,3 +351,4 @@ function drawBatLogo( curveArray ) {
 };
 
 drawBatLogo( [curve_1, curve_2, curve_3, curve_4, curve_5, curve_6, curve_7, curve_8, curve_9, curve_10, curve_11, curve_12] );
+*/
