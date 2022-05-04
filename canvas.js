@@ -6,6 +6,7 @@ var x = 200;
 var y = 200;
 var auxX = 15;
 var auxY = 5;
+var cor = gerar_cor_hexadecimal()
 
 function gerar_cor_hexadecimal() {
     return '#' + parseInt((Math.random() * 0xFFF))
@@ -13,7 +14,7 @@ function gerar_cor_hexadecimal() {
         .padStart(3, '0');
 }
 
-ctx.fillStyle = "green" 
+ctx.fillStyle = cor 
     ctx.fillRect(200, 200, 200, 200); 
 
 function animateY(){
@@ -21,7 +22,7 @@ function animateY(){
 
   ctx.clearRect(0, 0, innerWidth, innerHeight)
 
-   ctx.fillStyle = "green"
+   ctx.fillStyle = cor
    ctx.fillRect(200, y, 200, 200);
 
    if ((y + 200) > innerHeight) {
@@ -36,7 +37,7 @@ function animateX(){
 
 ctx.clearRect(0, 0, innerWidth, innerHeight)
 
-   ctx.fillStyle = "green"
+   ctx.fillStyle = cor
    ctx.fillRect(x, 200, 200, 200);
 
    if ((x + 200) > innerWidth) {
@@ -49,7 +50,7 @@ x = x + auxX
 function parar(){
   requestAnimationFrame(parar)
   ctx.clearRect(0, 0, innerWidth, innerHeight)
-  ctx.fillStyle = "green"
+  ctx.fillStyle = cor
   ctx.fillRect(200, 200, 200, 200);
 }
 
