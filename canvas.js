@@ -12,13 +12,16 @@ function gerar_cor_hexadecimal() {
         .toString(16)
         .padStart(3, '0');
 }
-/*
+
+ctx.fillStyle = "green" 
+    ctx.fillRect(200, 200, 200, 200); 
+
 function animateY(){
   requestAnimationFrame(animateY)
 
   ctx.clearRect(0, 0, innerWidth, innerHeight)
 
-   ctx.fillStyle = "grey"
+   ctx.fillStyle = "green"
    ctx.fillRect(200, y, 200, 200);
 
    if ((y + 200) > innerHeight) {
@@ -28,14 +31,12 @@ function animateY(){
 y = y + auxY
 }
 
-animateY() */
-/*
 function animateX(){
  requestAnimationFrame(animateX)
 
 ctx.clearRect(0, 0, innerWidth, innerHeight)
 
-   ctx.fillStyle = "purple"
+   ctx.fillStyle = "green"
    ctx.fillRect(x, 200, 200, 200);
 
    if ((x + 200) > innerWidth) {
@@ -43,9 +44,14 @@ ctx.clearRect(0, 0, innerWidth, innerHeight)
    }
    else if (x<0) auxX = -auxX
 x = x + auxX
-}
+} 
 
-animateX() */
+function parar(){
+  requestAnimationFrame(parar)
+  ctx.clearRect(0, 0, innerWidth, innerHeight)
+  ctx.fillStyle = "green"
+  ctx.fillRect(200, 200, 200, 200);
+}
 
 /*
 //Desafio 1 
